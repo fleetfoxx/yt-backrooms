@@ -38,8 +38,6 @@
 			query = searchTerms[randomIndex].term();
 		}
 
-    console.log(searchCache);
-
 		if (searchCache.has(query)) {
 			// TODO: This has the possibility of returning the same video more than
 			// once. Consider removing the video from the cache as they are played and
@@ -95,7 +93,7 @@
 	};
 
 	const loadClient = () => {
-		console.log('Loading GAPI client');
+		// console.log('Loading GAPI client');
 		// @ts-ignore
 		gapi.client.setApiKey(API_KEY);
 		// @ts-ignore
@@ -123,7 +121,11 @@
 
 <div class="container">
 	<div class="left-panel">
-		<h5>Categories</h5>
+		<div class="header">
+			<a id="home-link" title="return home" href="/">↩</a>
+			<h5 id="category-title">Categories</h5>
+			<span class="spacer" />
+		</div>
 		{#each Object.values(searchTerms) as term}
 			<SearchTermButton {term} on:click={() => handleSearchTermClick(term)} />
 		{/each}
@@ -155,15 +157,29 @@
 		overflow-y: scroll;
 	}
 
-	.left-panel > h5 {
+	.left-panel > .header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	#category-title {
 		margin: 0.5rem;
 	}
 
 	.right-panel {
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	button {
 		margin: 1rem;
+	}
+
+	#home-link {
+		text-decoration: none;
 	}
 </style>

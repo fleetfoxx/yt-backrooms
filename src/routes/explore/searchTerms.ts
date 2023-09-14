@@ -17,20 +17,18 @@ const hms = () => {
 };
 
 /**
- * Generate a 3 digit random number.
+ * 3 digit random number.
  */
-const xxx = () => {
-	const rand = Math.floor(Math.random() * 999);
-	return rand.toString().padStart(3, '0');
-};
+const xxx = Math.floor(Math.random() * 999)
+	.toString()
+	.padStart(3, '0');
 
 /**
- * Generate a 4 digit random number.
+ * 4 digit random number.
  */
-const xxxx = () => {
-	const rand = Math.floor(Math.random() * 9999);
-	return rand.toString().padStart(4, '0');
-};
+const xxxx = Math.floor(Math.random() * 9999)
+	.toString()
+	.padStart(4, '0');
 
 export const searchTerms: SearchTerm[] = [
 	{
@@ -45,7 +43,7 @@ export const searchTerms: SearchTerm[] = [
 	},
 	{
 		title: 'IMG XXXX',
-		term: () => `IMG ${xxxx()}`,
+		term: () => `IMG ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
@@ -55,42 +53,42 @@ export const searchTerms: SearchTerm[] = [
 	},
 	{
 		title: 'MVI XXXX',
-		term: () => `MVI ${xxxx()}`,
+		term: () => `MVI ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
 		title: 'MOV XXXX',
-		term: () => `MOV ${xxxx()}`,
+		term: () => `MOV ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
 		title: '100 XXXX',
-		term: () => `100 ${xxxx()}`,
+		term: () => `100 ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
 		title: 'DSC XXXX',
-		term: () => `DSC ${xxxx()}`,
+		term: () => `DSC ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
 		title: 'SAM XXXX',
-		term: () => `SAM ${xxxx()}`,
+		term: () => `SAM ${xxxx}`,
 		description: '(0000 - 9999)'
 	},
 	{
 		title: 'WA0XXX',
-		term: () => `WA0${xxx()}`,
+		term: () => `WA0${xxx}`,
 		description: '(000 - 999)'
 	},
 	{
 		title: 'GOPRXXXX',
-		term: () => `GOPR${xxxx()}`,
+		term: () => `GOPR${xxxx}`,
 		description: 'GoPro (0000 - 9999)'
 	},
 	{
 		title: 'FILEXXXX',
-		term: () => `FILE${xxxx()}`,
+		term: () => `FILE${xxxx}`,
 		description: 'Dash cam (0000 - 9999)'
 	},
 	{
@@ -179,30 +177,30 @@ export const searchTerms: SearchTerm[] = [
 		title: 'AUD-(-YMD-)',
 		term: () => `AUD-${ymd}`,
 		description: 'Audio-only (post 2013)'
-  },
-  {
-    title: "240P 400K",
-    term: () => "240P 400K",
-    description: "Fetish (NSFW)"
-  },
-  {
-    title: "480P 600K",
-    term: () => "480P 600K",
-    description: "Fetish (NSFW)"
-  },
-  {
-    title: "480P 2000K",
-    term: () => "480P 2000K",
-    description: "Fetish (NSFW)"
-  },
-  {
-    title: "720P 1500K",
-    term: () => "720P 1500K",
-    description: "Fetish (NSFW)"
-  },
-  {
-    title: "720P 4000K",
-    term: () => "720P 4000K",
-    description: "Fetish (NSFW)"
-  }
+	},
+	{
+		title: '240P 400K',
+		term: () => '240P 400K',
+		description: 'Fetish (NSFW)'
+	},
+	{
+		title: '480P 600K',
+		term: () => '480P 600K',
+		description: 'Fetish (NSFW)'
+	},
+	{
+		title: '480P 2000K',
+		term: () => '480P 2000K',
+		description: 'Fetish (NSFW)'
+	},
+	{
+		title: '720P 1500K',
+		term: () => '720P 1500K',
+		description: 'Fetish (NSFW)'
+	},
+	{
+		title: '720P 4000K',
+		term: () => '720P 4000K',
+		description: 'Fetish (NSFW)'
+	}
 ];
