@@ -104,11 +104,7 @@
 	<div class="left-panel">
 		<h5>Categories</h5>
 		{#each Object.values(searchTerms) as term}
-			<SearchTermButton
-				title={term.title}
-				description={term.description}
-				on:click={() => handleSearchTermClick(term)}
-			/>
+			<SearchTermButton {term} on:click={() => handleSearchTermClick(term)} />
 		{/each}
 	</div>
 
