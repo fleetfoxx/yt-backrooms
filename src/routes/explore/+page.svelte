@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte';
 	import { searchTerms } from './searchTerms';
 
-  const API_KEY = 'AIzaSyBlJ533t5_xnU8rYiNi-whBp9a1lCrNbjc'; // mine
+	const API_KEY = 'AIzaSyBlJ533t5_xnU8rYiNi-whBp9a1lCrNbjc'; // mine
 
 	onMount(async () => {
 		authenticate();
@@ -24,6 +24,7 @@
 	};
 
 	const loadNextVideo = () => {
+		return; // temporary short-circuit to preserve quota
 		const maxResults = 50;
 		let query = currentSearchTerm.term();
 
@@ -113,8 +114,8 @@
 
 	<div class="right-panel">
 		<h4>Current category: {currentSearchTerm.title}</h4>
-		<YouTube {videoId} options={{ playerVars: { autoplay: 1 } }} />
-    <!-- TODO: add video info and rarity -->
+		<YouTube {videoId} options={{ width: 960, height: 540, playerVars: { autoplay: 1 } }} />
+		<!-- TODO: add video info and rarity -->
 		<button on:click={loadNextVideo}>next</button>
 	</div>
 </div>
