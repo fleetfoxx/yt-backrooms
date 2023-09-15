@@ -34,7 +34,8 @@ export const searchTerms: SearchTerm[] = [
 	{
 		title: 'Random',
 		term: () => 'random',
-		description: 'Get a video from a random category.'
+    description: 'Get a video from a random category.',
+    excludeFromRandom: true
 	},
 	{
 		title: 'IMG',
@@ -113,7 +114,8 @@ export const searchTerms: SearchTerm[] = [
 		title: '-HMS-',
 		term: () => hms(),
 		example: '11092023',
-		description: 'Time of Day (000000 - 235959)'
+		description: 'Time of Day (000000 - 235959)',
+    excludeFromRandom: true
 	},
 	{
 		title: 'WIN -YMD-',
@@ -181,26 +183,31 @@ export const searchTerms: SearchTerm[] = [
 	{
 		title: '240P 400K',
 		term: () => '240P 400K',
-		description: 'Fetish (NSFW)'
+		description: 'Fetish (NSFW)',
+    excludeFromRandom: true
 	},
 	{
 		title: '480P 600K',
 		term: () => '480P 600K',
-		description: 'Fetish (NSFW)'
+		description: 'Fetish (NSFW)',
+    excludeFromRandom: true
 	},
 	{
 		title: '480P 2000K',
 		term: () => '480P 2000K',
-		description: 'Fetish (NSFW)'
+		description: 'Fetish (NSFW)',
+    excludeFromRandom: true
 	},
 	{
 		title: '720P 1500K',
 		term: () => '720P 1500K',
-		description: 'Fetish (NSFW)'
+		description: 'Fetish (NSFW)',
+    excludeFromRandom: true
 	},
 	{
 		title: '720P 4000K',
 		term: () => '720P 4000K',
-		description: 'Fetish (NSFW)'
+    description: 'Fetish (NSFW)',
+    excludeFromRandom: true
 	}
 ];

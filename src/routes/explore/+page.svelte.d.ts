@@ -2,7 +2,8 @@ export type SearchTerm = {
 	title: string;
   description: string;
   term: () => string;
-	example?: string;
+  example?: string;
+  excludeFromRandom?: boolean;
 };
 
 export type SearchResponse = {
